@@ -1,0 +1,23 @@
+{
+  "name": "saucedemo-playwright-pom",
+  "version": "1.0.0",
+  "description": "Demo Playwright test automation project using TypeScript and Page Object Model (POM) for SauceDemo",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.7.2"
+  }
+}
