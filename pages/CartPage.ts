@@ -145,4 +145,5 @@ export class CartPage extends BasePage {
   async clickProductName(productName: string): Promise<void> {
     await this._cartItemName.filter({ hasText: productName }).click();
   }
+  
 }

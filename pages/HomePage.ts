@@ -133,4 +133,26 @@ export class HomePage extends BasePage {
     await this._menuButton.click();
     await this._logoutLink.click();
   }
+   /**
+   * Add multiple products to cart and capture their details
+   * @param productNames - Array of product names to add
+   * @returns Array of product details (name, price, description)
+   */
+   async addMultipleProductsAndCaptureDetails(
+    productNames: string[]
+  ): Promise<Array<{ name: string; price: string; description: string }>> {
+    const products = [];
+
+    for (const productName of productNames) {
+      const price = await this.getProductPrice(productName);
+      const description = await this.getProductDescription(productName);
+      
+      products.push({ name: productName, price, description });
+      
+      await this.addProductToCartByName(productName);
+    }
+
+    return products;
+  }
+
 }

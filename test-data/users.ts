@@ -39,4 +39,24 @@ export const ERROR_MESSAGES = {
   LOCKED_USER: 'Epic sadface: Sorry, this user has been locked out.',
   REQUIRED_USERNAME: 'Epic sadface: Username is required',
   REQUIRED_PASSWORD: 'Epic sadface: Password is required',
+  FIRST_NAME_REQUIRED: 'First Name is required',
+  LAST_NAME_REQUIRED: 'Last Name is required',
+  POSTAL_CODE_REQUIRED: 'Postal Code is required',
 } as const;
+
+export const PAGE_TITLES = {
+  PRODUCTS: 'Products',
+  CART: 'Your Cart',
+  CHECKOUT_INFO: 'Checkout: Your Information',
+  CHECKOUT_OVERVIEW: 'Checkout: Overview',
+  CHECKOUT_COMPLETE: 'Checkout: Complete!',
+} as const;
+
+export const URLS = {
+  LOGIN: '/',
+  INVENTORY: '/inventory.html',
+  CART: '/cart.html',
+  CHECKOUT_STEP_ONE: '/checkout-step-one.html',
+  CHECKOUT_STEP_TWO: '/checkout-step-two.html',
+} as const;
+
